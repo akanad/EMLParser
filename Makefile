@@ -15,5 +15,8 @@ eml: parser.cpp  tokens.cpp main.cpp
 eml_dbg: parser.cpp tokens.dbg.cpp main.cpp
 	g++ -o eml_parser_dbg main.cpp parser.cpp tokens.dbg.cpp
 
+test:	eml_parser
+	cat sample.ea | eml_parser
+
 clean:
 	rm eml_parser eml_parser_dbg parser.cpp parser.hpp tokens.cpp tokens.dbg.cpp parser.output

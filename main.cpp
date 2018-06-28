@@ -8,6 +8,8 @@ extern int yyparse();
 
 int main(int argc, char **argv)
 {
-    yyparse();
-    return 0;
+    int r = 0;
+    r = yyparse();
+    cout << "yyparse : " << r << endl;
+    return r;
 }
