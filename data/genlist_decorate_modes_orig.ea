@@ -1,0 +1,676 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Genlist Decorate Modes"; win_name: "genlist-decorate-modes"; win_type: basic
+  size: { w: 520, h: 520 }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Box {
+      id: box_2
+      hint_align: [-1, -1]
+      horizontal: true
+      visible: true
+      Efl.Ui.Frame {
+        id: frame_1
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        text["elm.text"]: "Decorate Item Mode Type"
+        ["elm.swallow.content"]: Elm.Box {
+          id: box_3
+          visible: true
+          Efl.Ui.Radio {
+            id: radio_1; hint_align: [0.5, 0.5]
+            hint_weight: [1, 1]
+            state_value: 0
+            text["elm.text"]: "Slide : Sweep genlist items to the right."
+          }
+          Efl.Ui.Radio {
+            id: radio_2; hint_align: [0.5, 0.5]
+            hint_weight: [1, 1]
+            state_value: 1
+            text["elm.text"]: "Rotate : Click each item."
+            group_add: radio_1
+          }
+        }
+      }
+      Efl.Ui.Frame {
+        id: frame_2
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        text["elm.text"]: "Decorate All Mode Type"
+        ["elm.swallow.content"]: Elm.Box {
+          id: box_4
+          visible: true
+          Efl.Ui.Button {
+            id: button_1; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+            text["elm.text"]: "Set Decorate All Mode"
+          }
+          Efl.Ui.Button {
+            id: button_2; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+            text["elm.text"]: "Unset Decorate All Mode"
+          }
+        }
+      }
+    }
+    Elm.Genlist {
+      id: genlist_1
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      visible: true
+      Item {
+        creator: item_append
+        id: item_1; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #0"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_34
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_2; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #1"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_35
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_3; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #2"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_36
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_4; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #3"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_37
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_5; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #4"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_38
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_6; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #5"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_39
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_7; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #6"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_40
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_8; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #7"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_41
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_9; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #8"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_42
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_10; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #9"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_43
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_11; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #10"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_44
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_12; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #11"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_45
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_13; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #12"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_46
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_14; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #13"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_47
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_15; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #14"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_48
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_16; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #15"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_49
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_17; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #16"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_50
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_18; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #17"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_51
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_19; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #18"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_52
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_20; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #19"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_53
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_21; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #20"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_54
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_22; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #21"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_58
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_23; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #22"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_56
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_24; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        part_text["elm.text"]: "Item #23"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_57
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_25; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #24"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_25
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_26; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #25"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_26
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_27; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #26"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_27
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_28; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #27"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_28
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_29; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #28"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_29
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_30; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #29"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_30
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_31; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #30"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_31
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_32; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #31"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_32
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_33; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        part_text["elm.text"]: "Item #32"
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_33
+          file: ["/usr/local/share/elementary/images/bubble.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_34; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_35; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_36; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_37; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_38; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_39; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_40; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_41; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_42; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_43; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_44; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_45; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_46; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_47; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_48; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_49; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+      Item {
+        creator: item_append
+        id: item_50; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        decorate_item_style: "mode"
+        decorate_all_item_style: "edit"
+      }
+    }
+  }
+}

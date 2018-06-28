@@ -1,0 +1,10 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; win_name: "bg-plain"; win_type: basic
+  text: "Bg Plain"
+  size: { w: 320, h: 320 }
+  Efl.Ui.Bg_Widget {
+    id: bg_widget_1; hint_align: [0.5, 0.5]
+    hint_weight: [1, 1]
+    Efl.Gfx.Size_Hint.hint_restricted_min: { w: 160, h: 160 }
+  }
+}

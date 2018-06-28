@@ -1,0 +1,71 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Box Vert"; win_name: "box-vert"; win_type: basic
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Button {
+      id: button_1; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Next API function"
+      disabled: false
+      on clicked {
+        box_2.unpack: icon_3
+        box_2.pack_start: icon_3
+        text["elm.text"]: "Next API function (1)"
+      }
+      on clicked {
+        box_2.unpack: icon_2
+        box_2.pack_before: [icon_2, icon_1]
+        text["elm.text"]: "Next API function (2)"
+      }
+      on clicked {
+        box_2.unpack: icon_2
+        box_2.pack_after: [icon_2, icon_1]
+        text["elm.text"]: "Next API function (3)"
+      }
+      on clicked {
+        box_2.padding: [30, 15]
+        text["elm.text"]: "Next API function (4)"
+      }
+      on clicked {
+        box_2.align: [0.25, 0.75]
+        text["elm.text"]: "Next API function (5)"
+      }
+      on clicked {
+        box_2.homogeneous: true
+        text["elm.text"]: "Next API function (6)"
+      }
+    }
+    Elm.Box {
+      id: box_2
+      hint_weight: [1, 1]
+      visible: true
+      Elm.Icon {
+        id: icon_1
+        file: ["/usr/local/share/elementary/images/icon_01.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        resizable: [false, false]
+        hint_align: [0.5, 0.5]
+        visible: true
+      }
+      Elm.Icon {
+        id: icon_2
+        file: ["/usr/local/share/elementary/images/icon_02.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        resizable: [false, false]
+        hint_align: [0, 0.5]
+        visible: true
+      }
+      Elm.Icon {
+        id: icon_3
+        file: ["/usr/local/share/elementary/images/icon_03.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        resizable: [false, false]
+        hint_align: [1, 0.5]
+        visible: true
+      }
+    }
+  }
+}

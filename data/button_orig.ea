@@ -1,0 +1,127 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Buttons"; win_name: "buttons"; win_type: basic
+  size: { w: 320, h: 480 }
+  Elm.Scroller {
+    id: scroller_1
+    bounce_allow: [false, true]
+    policy: [off, auto]
+    hint_weight: [1, 1]
+    visible: true
+    ["elm.swallow.content"]: Elm.Box {
+      id: box_1
+      hint_weight: [1, 1]
+      visible: true
+      Efl.Ui.Button {
+        id: button_1; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Icon sized to button"
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_1
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_2; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Icon no scale"
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_2
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_3; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Disabled Button"
+        disabled: true
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_3
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_4; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        disabled: true
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_4
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_5; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Label Only"
+        autorepeat_enabled: true
+        autorepeat_initial_timeout: 2
+        autorepeat_gap_timeout: 0.5
+      }
+      Efl.Ui.Button {
+        id: button_6; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_5
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_7; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; Efl.Ui.Widget.style: "anchor"
+        text["elm.text"]: "Anchor style"
+      }
+      Efl.Ui.Button {
+        id: button_8; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; Efl.Ui.Widget.style: "anchor"
+        text["elm.text"]: "Icon sized to button"
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_6
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_9; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; Efl.Ui.Widget.style: "anchor"
+        text["elm.text"]: "Icon no scale"
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_7
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_10; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; Efl.Ui.Widget.style: "anchor"
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_8
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+      Efl.Ui.Button {
+        id: button_11; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; Efl.Ui.Widget.style: "anchor"
+        access_info: "This is some custom text describing this widget"
+        text["elm.text"]: "Disabled"
+        disabled: true
+        ["elm.swallow.content"]: Elm.Icon {
+          id: icon_9
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+        }
+      }
+    }
+  }
+}

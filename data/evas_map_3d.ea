@@ -1,0 +1,3410 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Evas Map 3D"; win_name: "evas-map-3d"; win_type: basic
+  size: { w: 480, h: 480 }
+  [none]: Evas.Image {
+    id: image_1
+    file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+    size: { w: 256, h: 256 }
+    pass_events: true
+    color: [235, 235, 235, 235]
+    visible: true
+    raise
+  }
+  [none]: Evas.Image {
+    id: image_2
+    file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+    size: { w: 256, h: 256 }
+    pass_events: true
+    color: [235, 235, 235, 235]
+    visible: true
+    visible: false
+    stack_below: image_1
+  }
+  [none]: Evas.Image {
+    id: image_3
+    file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+    size: { w: 256, h: 256 }
+    pass_events: true
+    color: [235, 235, 235, 235]
+    visible: true
+    visible: false
+    stack_below: image_6
+  }
+  [none]: Evas.Image {
+    id: image_4
+    file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+    size: { w: 256, h: 256 }
+    pass_events: true
+    color: [235, 235, 235, 235]
+    visible: true
+    visible: false
+    stack_below: image_2
+  }
+  [none]: Evas.Image {
+    id: image_5
+    file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+    size: { w: 256, h: 256 }
+    pass_events: true
+    color: [235, 235, 235, 235]
+    visible: true
+    visible: false
+    stack_below: image_4
+  }
+  [none]: Evas.Image {
+    id: image_6
+    file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+    size: { w: 256, h: 256 }
+    pass_events: true
+    color: [235, 235, 235, 235]
+    visible: true
+    visible: false
+    stack_below: image_5
+  }
+  Elm.Box {
+    layer: 10
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Slider {
+      id: slider_1
+      text["elm.text"]: "Rot X"
+      format_string: "%1.0f units"
+      range_min_max: [0, 360]
+      hint_align: [-1, 0.5]
+      hint_weight: [1, 1]
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: false
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_5.stack_below: image_4
+        image_3.stack_below: image_5
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_1.raise
+        image_6.stack_below: image_1
+        image_2.stack_below: image_6
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: true
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+    }
+    Elm.Slider {
+      id: slider_2
+      text["elm.text"]: "Rot Y"
+      format_string: "%1.0f units"
+      range_min_max: [0, 360]
+      hint_align: [-1, 0.5]
+      hint_weight: [1, 1]
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_4.stack_below: image_1
+        image_2.stack_below: image_4
+        image_3.stack_below: image_2
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_4.stack_below: image_6
+        image_1.stack_below: image_4
+        image_3.stack_below: image_1
+        image_2.stack_below: image_3
+        image_5.stack_below: image_2
+      }
+    }
+    Elm.Slider {
+      id: slider_3
+      text["elm.text"]: "Rot Z"
+      format_string: "%1.0f units"
+      range_min_max: [0, 360]
+      hint_align: [-1, 0.5]
+      hint_weight: [1, 1]
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_1.stack_below: image_6
+        image_2.stack_below: image_1
+        image_4.stack_below: image_2
+        image_3.stack_below: image_4
+        image_5.stack_below: image_3
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: false
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+    }
+    Elm.Slider {
+      id: slider_4
+      text["elm.text"]: "PX Off"
+      format_string: "%1.0f units"
+      range_min_max: [-320, 320]
+      range_value: 0
+      hint_align: [-1, 0.5]
+      hint_weight: [1, 1]
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+    }
+    Elm.Slider {
+      id: slider_5
+      text["elm.text"]: "PY Off"
+      format_string: "%1.0f units"
+      range_min_max: [-320, 320]
+      range_value: 0
+      hint_align: [-1, 0.5]
+      hint_weight: [1, 1]
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: false
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+      on changed {
+        image_1.visible: false
+        image_2.visible: true
+        image_3.visible: true
+        image_4.visible: false
+        image_5.visible: false
+        image_6.visible: true
+        image_6.raise
+        image_2.stack_below: image_6
+        image_1.stack_below: image_2
+        image_3.stack_below: image_1
+        image_4.stack_below: image_3
+        image_5.stack_below: image_4
+      }
+    }
+    Repeater ( 2, 2 = [ "Foc", "Z0" ], 4 = [ 1, -2000 ], 6 = [ 256, 0 ] ) {
+      Elm.Slider {
+        text["elm.text"]: %2
+        format_string: "%1.0f units"
+        range_min_max: [%4, 2000]
+        range_value: %6
+        hint_align: [-1, 0.5]
+        hint_weight: [1, 1]
+      }
+    }
+  }
+}

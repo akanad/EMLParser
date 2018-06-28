@@ -1,0 +1,49 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; win_name: "bg-image"; win_type: basic
+  text: "Bg Image"
+  size: { w: 320, h: 320 }
+  Efl.Ui.Bg_Widget {
+    id: bg_widget_1; hint_align: [0.5, 0.5]
+    hint_weight: [1, 1]
+    Efl.Gfx.Size_Hint.hint_restricted_min: { w: 160, h: 160 }
+  }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Bg_Widget {
+      id: bg_widget_2
+      file: ["/usr/local/share/elementary/images/plant_01.jpg", null]
+      hint_weight: [1, 1]
+      hint_align: [-1, -1]
+    }
+    Elm.Box {
+      id: box_2
+      horizontal: true
+      hint_weight: [1, -1]
+      hint_align: [-1, -1]
+      visible: true
+      Efl.Ui.Radio {
+        id: radio_1; hint_align: [0.5, 0.5]
+        state_value: 50
+        text["elm.text"]: "50 x 50"
+        hint_weight: [1, -1]
+        value: 200
+      }
+      Efl.Ui.Radio {
+        id: radio_2; hint_align: [0.5, 0.5]
+        state_value: 100
+        group_add: radio_1
+        text["elm.text"]: "100 x 100"
+        hint_weight: [1, -1]
+      }
+      Efl.Ui.Radio {
+        id: radio_3; hint_align: [0.5, 0.5]
+        state_value: 200
+        group_add: radio_1
+        text["elm.text"]: "200 x 200"
+        hint_weight: [1, -1]
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; win_name: "bg-options"; win_type: basic
+  text: "Bg Options"
+  size: { w: 320, h: 320 }
+  Efl.Ui.Bg_Widget {
+    id: bg_widget_1; hint_align: [0.5, 0.5]
+    hint_weight: [1, 1]
+    Efl.Gfx.Size_Hint.hint_restricted_min: { w: 160, h: 160 }
+  }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Bg_Widget {
+      id: bg_widget_2
+      file: ["/usr/local/share/elementary/images/plant_01.jpg", null]
+      hint_weight: [1, 1]
+      hint_align: [-1, -1]
+    }
+    Elm.Box {
+      id: box_2
+      horizontal: true
+      hint_weight: [1, -1]
+      hint_align: [-1, -1]
+      visible: true
+      Efl.Ui.Radio {
+        id: radio_1; hint_align: [0.5, 0.5]
+        state_value: 0
+        text["elm.text"]: "Center"
+        hint_weight: [1, -1]
+        value: 1
+        on changed {
+          bg_widget_2.option: center
+        }
+      }
+      Efl.Ui.Radio {
+        id: radio_2; hint_align: [0.5, 0.5]
+        state_value: 1
+        group_add: radio_1
+        text["elm.text"]: "Scale"
+        hint_weight: [1, -1]
+      }
+      Efl.Ui.Radio {
+        id: radio_3; hint_align: [0.5, 0.5]
+        state_value: 2
+        group_add: radio_1
+        text["elm.text"]: "Stretch"
+        hint_weight: [1, -1]
+        on changed {
+          bg_widget_2.option: stretch
+        }
+      }
+      Efl.Ui.Radio {
+        id: radio_4; hint_align: [0.5, 0.5]
+        state_value: 3
+        group_add: radio_1
+        text["elm.text"]: "Tile"
+        hint_weight: [1, -1]
+        on changed {
+          bg_widget_2.option: tile
+        }
+      }
+      Efl.Ui.Check {
+        id: check_1; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Show Overlay"
+        hint_weight: [1, -1]
+      }
+      Elm.Spinner {
+        id: spinner_1; Efl.Ui.Widget.style: "vertical"
+        range_min_max: [1, 4]
+        label_format: "%.0f"
+        editable: false
+        special_value_add: [1, "White"]
+        special_value_add: [2, "Red"]
+        special_value_add: [3, "Blue"]
+        special_value_add: [4, "Green"]
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+      }
+    }
+  }
+}

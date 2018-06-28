@@ -1,0 +1,51 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Conformant"; win_name: "conformant"; win_type: basic
+  size: { w: 240, h: 240 }
+  Elm.Conformant {
+    hint_weight: [1, 1]
+    visible: true
+    ["elm.swallow.content"]: Elm.Box {
+      hint_weight: [1, 1]
+      hint_align: [-1, -1]
+      visible: true
+      Elm.Entry {
+        scrollable: true
+        single_line: true
+        bounce_allow: [true, false]
+        Efl.Text.text["elm.text"]: "This is the top entry here"
+        hint_weight: [1, 0]
+        hint_align: [-1, 0.5]
+        visible: true
+      }
+      Efl.Ui.Button {
+        text["elm.text"]: "Test Conformant"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+      }
+      Elm.Entry {
+        scrollable: true
+        single_line: true
+        bounce_allow: [true, false]
+        Efl.Text.text["elm.text"]: "This is the middle entry here"
+        hint_weight: [1, 0]
+        hint_align: [-1, 0.5]
+        visible: true
+      }
+      Efl.Ui.Button {
+        text["elm.text"]: "Test Conformant"
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+      }
+      Elm.Entry {
+        scrollable: true
+        bounce_allow: [false, true]
+        Efl.Text.text["elm.text"]: "This is a multi-line entry at the bottom<br/>This can contain more than 1 line of text and be scrolled around to allow for entering of lots of content. It is also to test to see that autoscroll moves to the right part of a larger multi-line text entry that is inside of a scroller than can be scrolled around, thus changing the expected position as well as cursor changes updating auto-scroll when it is enabled."
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        visible: true
+      }
+    }
+  }
+  [none]: Efl.Loop_Timer {
+  }
+}

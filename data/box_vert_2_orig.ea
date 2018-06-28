@@ -1,0 +1,69 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Box Vert 2"; win_name: "box-vert2"; win_type: basic
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    padding: [10, 10]
+    visible: true
+    Efl.Ui.Button {
+      id: button_1
+      text["elm.text"]: "Button 1"
+      hint_align: [-1, -1]
+      hint_weight: [0, 0]
+      on clicked {
+        box_1.unpack: button_1
+        position: { x: 0, y: 0 }
+        color: [128, 64, 0, 128]
+        del button_1
+      }
+    }
+    Efl.Ui.Button {
+      id: button_2
+      text["elm.text"]: "Button 2"
+      hint_align: [-1, -1]
+      hint_weight: [0, 0]
+      on clicked {
+        box_1.unpack: button_2
+        position: { x: 0, y: 0 }
+        color: [128, 64, 0, 128]
+        del button_2
+      }
+    }
+    Efl.Ui.Button {
+      id: button_3
+      text["elm.text"]: "Button 3"
+      hint_align: [-1, -1]
+      hint_weight: [0, 0]
+      on clicked {
+        box_1.unpack: button_3
+        position: { x: 0, y: 0 }
+        color: [128, 64, 0, 128]
+        del button_3
+      }
+    }
+    Efl.Ui.Button {
+      id: button_4
+      text["elm.text"]: "Button 4"
+      hint_align: [-1, -1]
+      hint_weight: [0, 0]
+      on clicked {
+        box_1.unpack: button_4
+        position: { x: 0, y: 0 }
+        color: [128, 64, 0, 128]
+        del button_4
+      }
+    }
+    Efl.Ui.Button {
+      id: button_5
+      text["elm.text"]: "Button 5"
+      hint_align: [-1, -1]
+      hint_weight: [0, 0]
+      on clicked {
+        box_1.unpack: button_5
+        position: { x: 0, y: 0 }
+        color: [128, 64, 0, 128]
+        del button_5
+      }
+    }
+  }
+}

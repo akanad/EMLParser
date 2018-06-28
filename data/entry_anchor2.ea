@@ -1,0 +1,13 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Entry Anchor 2"; win_name: "entry_anchor2"; win_type: basic
+  size: { w: 320, h: 300 }
+  Elm.Entry {
+    anchor_hover_style: "popout"
+    anchor_hover_parent: win_1
+    Efl.Text.text["elm.text"]: "This is an entry widget in this window that<br/>uses markup <b>like this</> for styling and<br/>formatting <em>like this</>, as well as<br/><a href=X><link>links in the text</></a>, so enter text<br/>in here to edit it. By the way, links are<br/>called <a href=anc-02>Anchors</a> so you will need<br/>to refer to them this way. <item relsize=16x16 vsize=full href=emoticon/guilty-smile></item>"
+    hint_weight: [1, 1]
+    visible: true
+  }
+  [none]: Efl.Loop_Timer {
+  }
+}

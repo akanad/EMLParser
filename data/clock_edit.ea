@@ -1,0 +1,42 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Clock Edit"; win_name: "clock-edit"; win_type: basic
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Button {
+      hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Next API function"
+      disabled: false
+    }
+    Elm.Box {
+      hint_weight: [1, 1]
+      visible: true
+      Elm.Clock {
+        time: [0, 15, 3]
+        edit_mode: default
+        show_seconds: true
+        show_am_pm: true
+        visible: true
+        edit: true
+      }
+      Elm.Box {
+        hint_weight: [1, 1]
+        horizontal: true
+        visible: true
+        Efl.Ui.Button {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          text["elm.text"]: "Edit"
+          text["elm.text"]: "Done"
+        }
+        Efl.Ui.Button {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          text["elm.text"]: "24h"
+        }
+      }
+    }
+  }
+  Repeater ( 2 ) {
+    [none]: Efl.Loop_Timer {
+    }
+  }
+}

@@ -1,0 +1,114 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Conformant 2"; win_name: "conformant2"; win_type: basic
+  size: { w: 240, h: 480 }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Entry {
+      id: entry_1
+      scrollable: true
+      single_line: true
+      bounce_allow: [true, false]
+      Efl.Text.text["elm.text"]: "This is the top entry here"
+      hint_weight: [1, 0]
+      hint_align: [-1, 0.5]
+      visible: true
+    }
+    Efl.Ui.Button {
+      id: button_1
+      focus_allow: false
+      text["elm.text"]: "Delete Below"
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      on clicked {
+        naviframe_1.item_pop
+      }
+    }
+    Elm.Naviframe {
+      id: naviframe_1
+      hint_weight: [1, 1]
+      hint_align: [-1, -1]
+      visible: true
+      item_push: [null, null, null, conformant_1, null]
+      item_push: [null, null, null, conformant_2, null]
+    }
+  }
+  [none]: Elm.Conformant {
+    id: conformant_1
+    hint_weight: [1, 1]
+    hint_align: [-1, -1]
+    visible: true
+    ["elm.swallow.content"]: Elm.Box {
+      id: box_2
+      hint_weight: [1, 1]
+      hint_align: [-1, -1]
+      visible: true
+      Elm.Entry {
+        id: entry_2
+        scrollable: true
+        bounce_allow: [false, true]
+        Efl.Text.text["elm.text"]: "This entry and button below get deleted."
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        visible: true
+      }
+      Efl.Ui.Button {
+        id: button_2
+        focus_allow: false
+        text["elm.text"]: "Delete this bottom bit 1"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+      }
+    }
+  }
+  [none]: Elm.Conformant {
+    id: conformant_2
+    hint_weight: [1, 1]
+    hint_align: [-1, -1]
+    visible: true
+    ["elm.swallow.content"]: Elm.Box {
+      id: box_3
+      hint_weight: [1, 1]
+      hint_align: [-1, -1]
+      visible: true
+      Elm.Entry {
+        id: entry_3
+        scrollable: true
+        bounce_allow: [false, true]
+        Efl.Text.text["elm.text"]: "This entry and button below get deleted."
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        visible: true
+      }
+      Efl.Ui.Button {
+        id: button_3
+        focus_allow: false
+        text["elm.text"]: "Delete this bottom bit 2"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+      }
+      on manager,changed {
+        entry_3.reset_history
+      }
+    }
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_1
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_47
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_50
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_54
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_56
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_72
+  }
+}

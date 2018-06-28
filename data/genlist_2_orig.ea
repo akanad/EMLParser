@@ -1,0 +1,238 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; win_name: "genlist2"; win_type: basic
+  text: "Genlist 2"
+  size: { w: 320, h: 320 }
+  Efl.Ui.Bg_Widget {
+    id: bg_widget_1; hint_align: [0.5, 0.5]
+    file: ["/usr/local/share/elementary/images/plant_01.jpg", null]
+    hint_weight: [1, 1]
+  }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Genlist {
+      id: genlist_1
+      mode: compress
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      visible: true
+      Efl.Gfx.Size_Hint.hint_restricted_min: { w: 17, h: 2 }
+      Efl.Gfx.Size_Hint.hint_restricted_min: { w: 17, h: 2 }
+      Efl.Gfx.Size_Hint.hint_restricted_min: { w: 2, h: 2 }
+      content_region: [0, 0, 0, 0]
+      Efl.Gfx.Size_Hint.hint_restricted_min: { w: 2, h: 2 }
+      Item {
+        creator: item_append
+        id: item_1; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1001"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_91
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_92
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_2; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1002"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_93
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_94
+        }
+      }
+      Item {
+        creator: item_append
+        id: item_3; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1003"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_97
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_98
+        }
+      }
+      Item {
+        creator: item_prepend
+        id: item_4; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1004"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_89
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_90
+        }
+      }
+      Item {
+        creator: item_prepend
+        id: item_5; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1005"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_87
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_88
+        }
+      }
+      Item {
+        creator: item_insert_before
+        id: item_6; itc: 0x0; data: null; parent: null; before_it: item_3; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1006"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_95
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_96
+        }
+      }
+      Item {
+        creator: item_insert_after
+        id: item_7; itc: 0x0; data: null; parent: null; after_it: item_3; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item # 1007"
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_99
+        }
+        ["elm.swallow.end"]: Elm.Icon {
+          id: icon_100
+        }
+      }
+    }
+    Elm.Box {
+      id: box_2
+      horizontal: true
+      homogeneous: true
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      visible: true
+      Efl.Ui.Button {
+        id: button_1
+        text["elm.text"]: "/\\"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_2
+        text["elm.text"]: "\\/"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_3
+        text["elm.text"]: "#"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_4
+        text["elm.text"]: "U"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+    }
+    Elm.Box {
+      id: box_3
+      horizontal: true
+      homogeneous: true
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      visible: true
+      Efl.Ui.Button {
+        id: button_5
+        text["elm.text"]: "X"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+        on clicked {
+          genlist_1.clear
+        }
+      }
+      Efl.Ui.Button {
+        id: button_6
+        text["elm.text"]: "+"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+        on clicked {
+          Item (genlist_1): {
+            creator: item_append
+            id: item_8; itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+            part_text["elm.text"]: "Item # 0"
+            style: "default"
+            part_text["elm.text"]: "Item # 0"
+            ["elm.swallow.icon"]: Elm.Icon {
+              id: icon_101
+              file: ["/usr/local/share/elementary/images/logo_small.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              hint_aspect: [vertical, { w: 1, h: 1 }]
+            }
+            ["elm.swallow.end"]: Elm.Icon {
+              id: icon_102
+              file: ["/usr/local/share/elementary/images/bubble.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              hint_aspect: [vertical, { w: 1, h: 1 }]
+            }
+            ["elm.swallow.icon"]: Elm.Icon {
+              id: icon_103
+              file: ["/usr/local/share/elementary/images/logo_small.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              hint_aspect: [vertical, { w: 1, h: 1 }]
+            }
+            ["elm.swallow.end"]: Elm.Icon {
+              id: icon_104
+              file: ["/usr/local/share/elementary/images/bubble.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              hint_aspect: [vertical, { w: 1, h: 1 }]
+            }
+          }
+        }
+      }
+      Efl.Ui.Button {
+        id: button_7
+        text["elm.text"]: "-"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+    }
+    Elm.Box {
+      id: box_4
+      horizontal: true
+      homogeneous: true
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      visible: true
+      Efl.Ui.Button {
+        id: button_8
+        text["elm.text"]: "+ before"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_9
+        text["elm.text"]: "+ after"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_10
+        text["elm.text"]: "Flush"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+    }
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_9
+  }
+}

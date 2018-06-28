@@ -1,0 +1,91 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Flip Interactive"; win_name: "flip-interactive"; win_type: basic
+  size: { w: 320, h: 480 }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Flip {
+      id: flip_1
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      interaction: none
+      interaction_direction_enabled_set: [up, true]
+      interaction_direction_enabled_set: [down, true]
+      interaction_direction_enabled_set: [rtl, true]
+      interaction_direction_enabled_set: [ltr, true]
+      interaction_direction_hitsize_set: [up, 0.25]
+      interaction_direction_hitsize_set: [down, 0.25]
+      interaction_direction_hitsize_set: [rtl, 0.25]
+      interaction_direction_hitsize_set: [ltr, 0.25]
+      ["front"]: Evas.Image {
+        hint_weight: [1, 1]
+        file: ["/usr/local/share/elementary/images/twofish.jpg", null]
+        visible: true
+      }
+      ["back"]: Elm.List {
+        hint_weight: [1, 1]
+        go
+        visible: true
+        Item {
+          creator: item_append
+          label: "Item 0"; icon: null; end: null; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          label: "Item 1"; icon: null; end: null; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          label: "Item 2"; icon: null; end: null; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          label: "Item 3 (Which is very long just for testing purposes)"; icon: null; end: null; func: 0x0; data: null
+        }
+      }
+    }
+    Efl.Ui.Radio {
+      id: radio_1
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      state_value: 0
+      text["elm.text"]: "None"
+    }
+    Efl.Ui.Radio {
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      state_value: 1
+      text["elm.text"]: "Rotate"
+      group_add: radio_1
+    }
+    Efl.Ui.Radio {
+      id: radio_3
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      state_value: 2
+      text["elm.text"]: "Cube"
+      group_add: radio_1
+      on changed {
+        flip_1.interaction: cube
+      }
+    }
+    Efl.Ui.Radio {
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      state_value: 3
+      text["elm.text"]: "Page"
+      group_add: radio_1
+    }
+    Efl.Ui.Button {
+      id: button_1
+      text["elm.text"]: "Flip Go"
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      on clicked {
+      }
+      on clicked {
+        flip_1.go: cube_right
+      }
+    }
+  }
+}

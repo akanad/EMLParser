@@ -1,0 +1,47 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Genlist 3"; win_name: "genlist3"; win_type: basic
+  size: { w: 320, h: 320 }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Genlist {
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      visible: true
+      Repeater ( 3, 3 = [ "Item mode 0", "Item mode 1", "Item mode 2" ], 4, 12 = [ "/usr/local/share/elementary/images/logo_small.png", "/usr/local/share/elementary/images/logo.png", "/usr/local/share/elementary/images/panel_01.jpg" ], 12 = [ "/usr/local/share/elementary/images/sky_01.jpg", "/usr/local/share/elementary/images/sky_02.jpg", "/usr/local/share/elementary/images/sky_03.jpg" ] ) {
+        Item {
+          creator: item_append
+          itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+          style: "default"
+          part_text["elm.text"]: %3
+          ["elm.swallow.icon"]: Elm.Icon {
+            file: [%4, null]
+            smooth_scale: true
+            Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+            hint_aspect: [vertical, { w: 1, h: 1 }]
+          }
+          ["elm.swallow.end"]: Elm.Icon {
+            file: [%12, null]
+            smooth_scale: true
+            Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+            hint_aspect: [vertical, { w: 1, h: 1 }]
+          }
+        }
+      }
+    }
+    Elm.Box {
+      horizontal: true
+      homogeneous: true
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      visible: true
+      Repeater ( 3, 2 = [ "[1]", "labels", "contents" ] ) {
+        Efl.Ui.Button {
+          text["elm.text"]: %2
+          hint_align: [-1, -1]
+          hint_weight: [1, 0]
+        }
+      }
+    }
+  }
+}

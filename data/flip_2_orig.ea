@@ -1,0 +1,172 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; win_name: "flip2"; win_type: basic
+  text: "Flip 2"
+  size: { w: 320, h: 480 }
+  Efl.Ui.Bg_Widget {
+    id: bg_widget_1; hint_align: [0.5, 0.5]
+    file: ["/usr/local/share/elementary/images/sky_01.jpg", null]
+    hint_weight: [1, 1]
+  }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Flip {
+      id: flip_1
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      ["front"]: Elm.Box {
+        id: box_2
+        hint_align: [-1, -1]
+        hint_weight: [1, 1]
+        visible: true
+        Elm.Toolbar {
+          id: toolbar_1
+          homogeneous: false
+          hint_weight: [0, 0]
+          hint_align: [-1, 0]
+          Item {
+            creator: item_append
+            id: toolbar_item_1; icon: "arrow_left"; label: "Hello"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: toolbar_item_2; icon: "arrow_right"; label: "Out"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: toolbar_item_3; icon: "home"; label: "There"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: toolbar_item_4; icon: "refresh"; label: "World"; func: 0x0; data: null
+          }
+        }
+        Elm.List {
+          id: list_1
+          hint_align: [-1, -1]
+          hint_weight: [1, 1]
+          go
+          visible: true
+          Item {
+            creator: item_append
+            id: item_1; label: "This is a list"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_2; label: "Second item"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_3; label: "3rd"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_4; label: "Fourth"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_5; label: "Number five is alive!"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_6; label: "The quick brown fox jumps over the lazy dog"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_7; label: "Booyah"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_8; label: "And another item"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_9; label: "More of them"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            id: item_10; label: "Get with it"; icon: null; end: null; func: 0x0; data: null
+          }
+        }
+        [none]: Elm.Menu {
+          id: menu_8
+          Item {
+            creator: item_add
+            id: item_39; parent: null; icon: "arrow_left"; label: "Hello"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_add
+            id: item_40; parent: null; icon: "arrow_right"; label: "Out"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_add
+            id: item_41; parent: null; icon: "home"; label: "There"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_add
+            id: item_42; parent: null; icon: "refresh"; label: "World"; func: 0x0; data: null
+          }
+        }
+      }
+      ["back"]: Elm.Entry {
+        id: entry_1
+        scrollable: true
+        line_wrap: none
+        Efl.Text.text["elm.text"]: "This is an entry widget in this window that<br/>uses markup <b>like this</> for styling and<br/>formatting <em>like this</>, as well as<br/><a href=X><link>links in the text</></a>, so enter text<br/>in here to edit it. By the way, links are<br/>called <a href=anc-02>Anchors</a> so you will need<br/>to refer to them this way.<br/><br/>Also you can stick in items with (relsize + ascent): <item relsize=16x16 vsize=ascent href=emoticon/evil-laugh></item> (full) <item relsize=16x16 vsize=full href=emoticon/guilty-smile></item> (to the left)<br/>Also (size + ascent): <item size=16x16 vsize=ascent href=emoticon/haha></item> (full) <item size=16x16 vsize=full href=emoticon/happy-panting></item> (before this)<br/>And as well (absize + ascent): <item absize=64x64 vsize=ascent href=emoticon/knowing-grin></item> (full) <item absize=64x64 vsize=full href=emoticon/not-impressed></item> or even paths to image files on disk too like: <item absize=96x128 vsize=full href=file:///usr/local/share/elementary/images/sky_01.jpg></item> ... end."
+        hint_align: [-1, -1]
+        hint_weight: [1, 1]
+        visible: true
+      }
+    }
+    Elm.Box {
+      id: box_3
+      horizontal: true
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      visible: true
+      Efl.Ui.Button {
+        id: button_1
+        text["elm.text"]: "1"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_2
+        text["elm.text"]: "2"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+        on clicked {
+          flip_1.go: rotate_x_center_axis
+        }
+      }
+      Efl.Ui.Button {
+        id: button_3
+        text["elm.text"]: "3"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+        on clicked {
+          flip_1.go: rotate_xz_center_axis
+        }
+      }
+      Efl.Ui.Button {
+        id: button_4
+        text["elm.text"]: "4"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_5
+        text["elm.text"]: "5"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_6
+        text["elm.text"]: "6"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+    }
+  }
+}

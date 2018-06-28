@@ -1,0 +1,107 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Genlist 5"; win_name: "genlist5"; win_type: basic
+  focus_highlight_enabled: true
+  size: { w: 320, h: 320 }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Genlist {
+      select_mode: always
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      visible: true
+      Item {
+        creator: item_append
+        itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "double_label"
+        part_text["elm.text"]: "Item mode 0"
+        part_text["elm.text.sub"]: "0 bottles on the wall"
+        ["elm.swallow.icon"]: Elm.Box {
+          horizontal: true
+          horizontal: true
+          visible: true
+          Repeater ( 2 ) {
+            Elm.Icon {
+              file: ["/usr/local/share/elementary/images/logo_small.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              resizable: [false, false]
+              visible: true
+            }
+          }
+        }
+        ["elm.swallow.end"]: Efl.Ui.Check {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          propagate_events: false
+          state: false
+        }
+      }
+      Item {
+        creator: item_append
+        itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "double_label"
+        part_text["elm.text"]: "Item mode 1"
+        part_text["elm.text.sub"]: "1 bottles on the wall"
+        ["elm.swallow.icon"]: Elm.Box {
+          horizontal: true
+          horizontal: true
+          visible: true
+          Repeater ( 2 ) {
+            Elm.Icon {
+              file: ["/usr/local/share/elementary/images/logo_small.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              resizable: [false, false]
+              visible: true
+            }
+          }
+        }
+        ["elm.swallow.end"]: Efl.Ui.Check {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          propagate_events: false
+          state: false
+        }
+      }
+      Item {
+        creator: item_append
+        itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "double_label"
+        part_text["elm.text"]: "Item mode 2"
+        part_text["elm.text.sub"]: "2 bottles on the wall"
+        ["elm.swallow.icon"]: Elm.Box {
+          horizontal: true
+          horizontal: true
+          visible: true
+          Repeater ( 2 ) {
+            Elm.Icon {
+              file: ["/usr/local/share/elementary/images/logo_small.png", null]
+              smooth_scale: true
+              Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+              resizable: [false, false]
+              visible: true
+            }
+          }
+        }
+        ["elm.swallow.end"]: Efl.Ui.Check {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          propagate_events: false
+          state: false
+        }
+      }
+    }
+    Elm.Box {
+      horizontal: true
+      homogeneous: true
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      visible: true
+      Repeater ( 3, 2 = [ "[1]", "[2]", "[3]" ] ) {
+        Efl.Ui.Button {
+          text["elm.text"]: %2
+          hint_align: [-1, -1]
+          hint_weight: [1, 0]
+        }
+      }
+    }
+  }
+}

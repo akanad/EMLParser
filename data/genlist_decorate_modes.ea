@@ -1,0 +1,94 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Genlist Decorate Modes"; win_name: "genlist-decorate-modes"; win_type: basic
+  size: { w: 520, h: 520 }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Box {
+      hint_align: [-1, -1]
+      horizontal: true
+      visible: true
+      Efl.Ui.Frame {
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        text["elm.text"]: "Decorate Item Mode Type"
+        ["elm.swallow.content"]: Elm.Box {
+          visible: true
+          Efl.Ui.Radio {
+            id: radio_1; hint_align: [0.5, 0.5]
+            hint_weight: [1, 1]
+            state_value: 0
+            text["elm.text"]: "Slide : Sweep genlist items to the right."
+          }
+          Efl.Ui.Radio {
+            hint_align: [0.5, 0.5]
+            hint_weight: [1, 1]
+            state_value: 1
+            text["elm.text"]: "Rotate : Click each item."
+            group_add: radio_1
+          }
+        }
+      }
+      Efl.Ui.Frame {
+        hint_weight: [1, 1]
+        hint_align: [-1, -1]
+        text["elm.text"]: "Decorate All Mode Type"
+        ["elm.swallow.content"]: Elm.Box {
+          visible: true
+          Repeater ( 2, 6 = [ "Set Decorate All Mode", "Unset Decorate All Mode" ] ) {
+            Efl.Ui.Button {
+              hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+              text["elm.text"]: %6
+            }
+          }
+        }
+      }
+    }
+    Elm.Genlist {
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      visible: true
+      Repeater ( 24, 5 = [ "Item #0", "Item #1", "Item #2", "Item #3", "Item #4", "Item #5", "Item #6", "Item #7", "Item #8", "Item #9", "Item #10", "Item #11", "Item #12", "Item #13", "Item #14", "Item #15", "Item #16", "Item #17", "Item #18", "Item #19", "Item #20", "Item #21", "Item #22", "Item #23" ] ) {
+        Item {
+          creator: item_append
+          itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+          style: "default"
+          decorate_item_style: "mode"
+          decorate_all_item_style: "edit"
+          part_text["elm.text"]: %5
+          ["elm.swallow.end"]: Elm.Icon {
+            file: ["/usr/local/share/elementary/images/bubble.png", null]
+            smooth_scale: true
+            Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+            hint_aspect: [vertical, { w: 1, h: 1 }]
+          }
+        }
+      }
+      Repeater ( 9, 2 = [ "Item #24", "Item #25", "Item #26", "Item #27", "Item #28", "Item #29", "Item #30", "Item #31", "Item #32" ] ) {
+        Item {
+          creator: item_append
+          itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+          part_text["elm.text"]: %2
+          style: "default"
+          decorate_item_style: "mode"
+          decorate_all_item_style: "edit"
+          ["elm.swallow.end"]: Elm.Icon {
+            file: ["/usr/local/share/elementary/images/bubble.png", null]
+            smooth_scale: true
+            Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+            hint_aspect: [vertical, { w: 1, h: 1 }]
+          }
+        }
+      }
+      Repeater ( 17 ) {
+        Item {
+          creator: item_append
+          itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+          style: "default"
+          decorate_item_style: "mode"
+          decorate_all_item_style: "edit"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; win_name: "flip2"; win_type: basic
+  text: "Flip 2"
+  size: { w: 320, h: 480 }
+  Efl.Ui.Bg_Widget {
+    hint_align: [0.5, 0.5]
+    file: ["/usr/local/share/elementary/images/sky_01.jpg", null]
+    hint_weight: [1, 1]
+  }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Flip {
+      id: flip_1
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      ["front"]: Elm.Box {
+        hint_align: [-1, -1]
+        hint_weight: [1, 1]
+        visible: true
+        Elm.Toolbar {
+          homogeneous: false
+          hint_weight: [0, 0]
+          hint_align: [-1, 0]
+          Item {
+            creator: item_append
+            icon: "arrow_left"; label: "Hello"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            icon: "arrow_right"; label: "Out"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            icon: "home"; label: "There"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            icon: "refresh"; label: "World"; func: 0x0; data: null
+          }
+        }
+        Elm.List {
+          hint_align: [-1, -1]
+          hint_weight: [1, 1]
+          go
+          visible: true
+          Item {
+            creator: item_append
+            label: "This is a list"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "Second item"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "3rd"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "Fourth"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "Number five is alive!"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "The quick brown fox jumps over the lazy dog"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "Booyah"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "And another item"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "More of them"; icon: null; end: null; func: 0x0; data: null
+          }
+          Item {
+            creator: item_append
+            label: "Get with it"; icon: null; end: null; func: 0x0; data: null
+          }
+        }
+        [none]: Elm.Menu {
+          Item {
+            creator: item_add
+            parent: null; icon: "arrow_left"; label: "Hello"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_add
+            parent: null; icon: "arrow_right"; label: "Out"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_add
+            parent: null; icon: "home"; label: "There"; func: 0x0; data: null
+          }
+          Item {
+            creator: item_add
+            parent: null; icon: "refresh"; label: "World"; func: 0x0; data: null
+          }
+        }
+      }
+      ["back"]: Elm.Entry {
+        scrollable: true
+        line_wrap: none
+        Efl.Text.text["elm.text"]: "This is an entry widget in this window that<br/>uses markup <b>like this</> for styling and<br/>formatting <em>like this</>, as well as<br/><a href=X><link>links in the text</></a>, so enter text<br/>in here to edit it. By the way, links are<br/>called <a href=anc-02>Anchors</a> so you will need<br/>to refer to them this way.<br/><br/>Also you can stick in items with (relsize + ascent): <item relsize=16x16 vsize=ascent href=emoticon/evil-laugh></item> (full) <item relsize=16x16 vsize=full href=emoticon/guilty-smile></item> (to the left)<br/>Also (size + ascent): <item size=16x16 vsize=ascent href=emoticon/haha></item> (full) <item size=16x16 vsize=full href=emoticon/happy-panting></item> (before this)<br/>And as well (absize + ascent): <item absize=64x64 vsize=ascent href=emoticon/knowing-grin></item> (full) <item absize=64x64 vsize=full href=emoticon/not-impressed></item> or even paths to image files on disk too like: <item absize=96x128 vsize=full href=file:///usr/local/share/elementary/images/sky_01.jpg></item> ... end."
+        hint_align: [-1, -1]
+        hint_weight: [1, 1]
+        visible: true
+      }
+    }
+    Elm.Box {
+      horizontal: true
+      hint_align: [-1, -1]
+      hint_weight: [1, 0]
+      visible: true
+      Efl.Ui.Button {
+        text["elm.text"]: "1"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+      }
+      Efl.Ui.Button {
+        id: button_2
+        text["elm.text"]: "2"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+        on clicked {
+          flip_1.go: rotate_x_center_axis
+        }
+      }
+      Efl.Ui.Button {
+        id: button_3
+        text["elm.text"]: "3"
+        hint_align: [-1, -1]
+        hint_weight: [1, 0]
+        on clicked {
+          flip_1.go: rotate_xz_center_axis
+        }
+      }
+      Repeater ( 3, 2 = [ "4", "5", "6" ] ) {
+        Efl.Ui.Button {
+          text["elm.text"]: %2
+          hint_align: [-1, -1]
+          hint_weight: [1, 0]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Bubble"; win_name: "bubble"; win_type: basic
+  [none]: Efl.Canvas.Rectangle {
+    id: rectangle_1
+    layer: 32767
+    color: [0, 0, 0, 0]
+    size: { w: 99999, h: 99999 }
+    repeat_events: true
+    visible: true
+  }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Button {
+      id: button_1; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Next API function"
+      disabled: false
+      on clicked {
+        bubble_1.pos: bottom_left
+        label_1.Efl.Text.text["elm.text"]: "Corner: base (bottom-left) - with icon"
+        bubble_2.pos: top_right
+        label_2.Efl.Text.text["elm.text"]: "Corner: base (top-right) - no icon"
+        text["elm.text"]: "Next API function (1)"
+        disabled: false
+      }
+      on clicked {
+        bubble_1.pos: top_right
+        label_1.Efl.Text.text["elm.text"]: "Corner: base (top-right) - with icon"
+        bubble_2.pos: bottom_left
+        label_2.Efl.Text.text["elm.text"]: "Corner: base (bottom-left) - no icon"
+        text["elm.text"]: "Next API function (2)"
+        disabled: false
+      }
+      on clicked {
+        ["elm.swallow.content"]: Elm.Icon (bubble_1): {
+          id: icon_2
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+          hint_align: [0.5, 0.5]
+          visible: true
+        }
+        ["elm.swallow.content"]: Elm.Label (bubble_2): {
+          id: label_3
+          Efl.Text.text["elm.text"]: "Using icon as top-bubble content"
+        }
+        text["elm.text"]: "Next API function (3)"
+        disabled: true
+      }
+    }
+    Elm.Box {
+      id: box_2
+      hint_weight: [1, 1]
+      visible: true
+      Elm.Bubble {
+        id: bubble_1
+        Efl.Text.text["elm.text"]: "Message 1"
+        Efl.Text.text["elm.info"]: "Corner: bottom_right"
+        pos: bottom_right
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+        visible: true
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_1
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+          hint_aspect: [horizontal, { w: 1, h: 1 }]
+          visible: true
+        }
+        ["elm.swallow.content"]: Elm.Label {
+          id: label_1
+          Efl.Text.text["elm.text"]: "\"The future of the art: R or G or B?\",  by Rusty"
+        }
+      }
+      Elm.Bubble {
+        id: bubble_2
+        Efl.Text.text["elm.text"]: "Message 2"
+        Efl.Text.text["elm.info"]: "10:32 4/11/2008"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+        visible: true
+        ["elm.swallow.content"]: Elm.Label {
+          id: label_2
+          Efl.Text.text["elm.text"]: "Corner: base (top-left) - no icon"
+        }
+      }
+    }
+  }
+}

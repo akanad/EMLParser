@@ -1,0 +1,544 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Flip Selector"; win_name: "flipselector"; win_type: basic
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Flipselector {
+      id: flipselector_1
+      hint_weight: [1, 1]
+      visible: true
+      Item {
+        creator: item_append
+        id: item_1; label: "Elementary"; func: 0x0; data: null
+      }
+      Item {
+        creator: item_append
+        id: item_2; label: "Evas"; func: 0x0; data: null
+      }
+      Item {
+        creator: item_append
+        id: item_3; label: "Eina"; func: 0x0; data: null
+      }
+      Item {
+        creator: item_append
+        id: item_4; label: "Edje"; func: 0x0; data: null
+        selected: true
+      }
+      Item {
+        creator: item_append
+        id: item_5; label: "Eet"; func: 0x0; data: null
+      }
+      Item {
+        creator: item_append
+        id: item_6; label: "Ecore"; func: 0x0; data: null
+      }
+      Item {
+        creator: item_append
+        id: item_7; label: "Efreet"; func: 0x0; data: null
+      }
+      Item {
+        creator: item_append
+        id: item_8; label: "Eldbus"; func: 0x0; data: null
+      }
+    }
+    Elm.Box {
+      id: box_2
+      hint_weight: [1, 1]
+      horizontal: true
+      visible: true
+      Efl.Ui.Button {
+        id: button_1; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Flip Prev"
+      }
+      Elm.Flipselector {
+        id: flipselector_2
+        hint_weight: [1, 1]
+        visible: true
+        Item {
+          creator: item_append
+          id: item_9; label: "1990"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_10; label: "1991"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_11; label: "1992"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_12; label: "1993"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_13; label: "1994"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_14; label: "1995"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_15; label: "1996"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_16; label: "1997"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_17; label: "1998"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_18; label: "1999"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_19; label: "2000"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_20; label: "2001"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_21; label: "2002"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_22; label: "2003"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_23; label: "2004"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_24; label: "2005"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_25; label: "2006"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_26; label: "2007"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_27; label: "2008"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_28; label: "2009"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_29; label: "2010"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_30; label: "2011"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_31; label: "2012"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_32; label: "2013"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_33; label: "2014"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_34; label: "2015"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_35; label: "2016"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_36; label: "2017"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_37; label: "2018"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_38; label: "2019"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_39; label: "2020"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_40; label: "2021"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_41; label: "2022"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_42; label: "2023"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_43; label: "2024"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_44; label: "2025"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_45; label: "2026"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_46; label: "2027"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_47; label: "2028"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_48; label: "2029"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_49; label: "2030"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_50; label: "2031"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_51; label: "2032"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_52; label: "2033"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_53; label: "2034"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_54; label: "2035"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_55; label: "2036"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_56; label: "2037"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_57; label: "2038"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_58; label: "2039"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_59; label: "2040"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_60; label: "2041"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_61; label: "2042"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_62; label: "2043"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_63; label: "2044"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_64; label: "2045"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_65; label: "2046"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_66; label: "2047"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_67; label: "2048"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_68; label: "2049"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_69; label: "2050"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_70; label: "2051"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_71; label: "2052"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_72; label: "2053"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_73; label: "2054"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_74; label: "2055"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_75; label: "2056"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_76; label: "2057"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_77; label: "2058"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_78; label: "2059"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_79; label: "2060"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_80; label: "2061"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_81; label: "2062"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_82; label: "2063"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_83; label: "2064"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_84; label: "2065"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_85; label: "2066"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_86; label: "2067"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_87; label: "2068"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_88; label: "2069"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_89; label: "2070"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_90; label: "2071"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_91; label: "2072"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_92; label: "2073"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_93; label: "2074"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_94; label: "2075"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_95; label: "2076"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_96; label: "2077"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_97; label: "2078"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_98; label: "2079"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_99; label: "2080"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_100; label: "2081"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_101; label: "2082"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_102; label: "2083"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_103; label: "2084"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_104; label: "2085"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_105; label: "2086"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_106; label: "2087"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_107; label: "2088"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_108; label: "2089"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_109; label: "2090"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_110; label: "2091"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_111; label: "2092"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_112; label: "2093"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_113; label: "2094"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_114; label: "2095"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_115; label: "2096"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_116; label: "2097"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_117; label: "2098"; func: 0x0; data: null
+        }
+        Item {
+          creator: item_append
+          id: item_118; label: "2099"; func: 0x0; data: null
+        }
+      }
+      Efl.Ui.Button {
+        id: button_2; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+        text["elm.text"]: "Flip Next"
+      }
+    }
+    Elm.Flipselector {
+      id: flipselector_3
+      hint_weight: [1, 1]
+      disabled: true
+      visible: true
+      Item {
+        creator: item_append
+        id: item_119; label: "disabled"; func: 0x0; data: null
+      }
+    }
+    Elm.Slider {
+      id: slider_1
+      text["elm.text"]: "Flip Interval:"
+      format_string: "%1.2f"
+      range_min_max: [0, 3]
+      range_value: 0.85
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+    }
+    Efl.Ui.Button {
+      id: button_3; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Select Last"
+    }
+    Efl.Ui.Button {
+      id: button_4; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Select 2097"
+    }
+    Efl.Ui.Button {
+      id: button_5; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Unselect year"
+    }
+    Elm.Flipselector {
+      id: flipselector_4
+      hint_weight: [1, 1]
+      range_step: 1.5
+      range_min_max: [2.3, 10.1]
+      range_value: 5.3
+      visible: true
+    }
+  }
+}

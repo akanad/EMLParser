@@ -1,0 +1,79 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Check"; win_name: "check"; win_type: basic
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Check {
+      id: check_1; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Icon sized to check"
+      state: true
+      ["elm.swallow.content"]: Elm.Icon {
+        id: icon_1
+        file: ["/usr/local/share/elementary/images/logo_small.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        hint_aspect: [vertical, { w: 1, h: 1 }]
+        visible: true
+      }
+    }
+    Efl.Ui.Check {
+      id: check_2; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Icon not resizable"
+      ["elm.swallow.content"]: Elm.Icon {
+        id: icon_2
+        file: ["/usr/local/share/elementary/images/logo_small.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        resizable: [false, false]
+        visible: true
+      }
+    }
+    Efl.Ui.Check {
+      id: check_3; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Label Only"
+    }
+    Efl.Ui.Check {
+      id: check_4; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Use State Pointer"
+    }
+    Efl.Ui.Check {
+      id: check_5; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Print State Pointer Value"
+    }
+    Efl.Ui.Check {
+      id: check_6; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "Disabled check"
+      state: true
+      disabled: true
+      ["elm.swallow.content"]: Elm.Icon {
+        id: icon_3
+        file: ["/usr/local/share/elementary/images/logo_small.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        hint_aspect: [vertical, { w: 1, h: 1 }]
+        visible: true
+      }
+    }
+    Efl.Ui.Check {
+      id: check_7; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      disabled: true
+    }
+    Efl.Ui.Check {
+      id: check_8; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      ["elm.swallow.content"]: Elm.Icon {
+        id: icon_4
+        file: ["/usr/local/share/elementary/images/logo_small.png", null]
+        smooth_scale: true
+        Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+        resizable: [false, false]
+        visible: true
+      }
+    }
+    Efl.Ui.Check {
+      id: check_9; hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+      text["elm.text"]: "text is visible when check state is true."
+      state: true
+    }
+  }
+}

@@ -1,0 +1,93 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Actionslider"; win_name: "actionslider"; win_type: basic
+  size: { w: 320, h: 400 }
+  Elm.Box {
+    id: box_1
+    hint_weight: [1, 0]
+    visible: true
+    Elm.Actionslider {
+      id: actionslider_1
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: right
+      magnet_pos: right
+      Efl.Text.text["elm.text.left"]: "Snooze"
+      Efl.Text.text["elm.text.center"]: null
+      Efl.Text.text["elm.text.right"]: "Stop"
+      enabled_pos: 5
+      visible: true
+    }
+    Elm.Actionslider {
+      id: actionslider_2
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: center
+      magnet_pos: center
+      Efl.Text.text["elm.text.left"]: "Snooze"
+      Efl.Text.text["elm.text.center"]: null
+      Efl.Text.text["elm.text.right"]: "Stop"
+      enabled_pos: 5
+      visible: true
+    }
+    Elm.Actionslider {
+      id: actionslider_3; Efl.Ui.Widget.style: "bar"
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: left
+      magnet_pos: 6
+      enabled_pos: 6
+      Efl.Text.text["elm.text.left"]: null
+      Efl.Text.text["elm.text.center"]: "Accept"
+      Efl.Text.text["elm.text.right"]: "Reject"
+      visible: true
+    }
+    Elm.Actionslider {
+      id: actionslider_4; Efl.Ui.Widget.style: "bar"
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: left
+      magnet_pos: left
+      Efl.Text.text["elm.text.left"]: null
+      Efl.Text.text["elm.text.center"]: "Accept"
+      Efl.Text.text["elm.text.right"]: "Reject"
+      Efl.Text.text["elm.text.indicator"]: "Go"
+      visible: true
+    }
+    Elm.Actionslider {
+      id: actionslider_5; Efl.Ui.Widget.style: "bar"
+      disabled: true
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: left
+      magnet_pos: left
+      Efl.Text.text["elm.text.left"]: null
+      Efl.Text.text["elm.text.center"]: "Accept"
+      Efl.Text.text["elm.text.right"]: "Reject"
+      Efl.Text.text["elm.text.indicator"]: "Go"
+      visible: true
+    }
+    Elm.Actionslider {
+      id: actionslider_6
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: left
+      magnet_pos: all
+      Efl.Text.text["elm.text.left"]: "Left"
+      Efl.Text.text["elm.text.center"]: "Center"
+      Efl.Text.text["elm.text.right"]: "Right"
+      Efl.Text.text["elm.text.indicator"]: "Go"
+      visible: true
+    }
+    Elm.Actionslider {
+      id: actionslider_7
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      indicator_pos: center
+      magnet_pos: center
+      Efl.Text.text["elm.text.left"]: "Enable"
+      Efl.Text.text["elm.text.center"]: "Magnet"
+      Efl.Text.text["elm.text.right"]: "Disable"
+      visible: true
+    }
+  }
+}

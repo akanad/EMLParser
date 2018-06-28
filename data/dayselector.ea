@@ -1,0 +1,38 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Day Selector"; win_name: "dayselector"; win_type: basic
+  size: { w: 350, h: 150 }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Elm.Dayselector {
+      hint_weight: [1, 1]
+      hint_align: [-1, 0.5]
+      visible: true
+    }
+    Elm.Dayselector {
+      hint_weight: [1, 1]
+      hint_align: [-1, 0.5]
+      visible: true
+      weekdays_names_set: { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }
+      week_start: sun
+    }
+    Elm.Dayselector {
+      hint_weight: [1, 1]
+      hint_align: [-1, 0.5]
+      week_start: mon
+      visible: true
+    }
+    Elm.Dayselector {
+      hint_weight: [1, 1]
+      hint_align: [-1, 0.5]
+      weekdays_names_set: { "S", "M", "T", "W", "T", "F", "S" }
+      visible: true
+    }
+    Elm.Dayselector {
+      hint_weight: [1, 1]
+      hint_align: [-1, 0.5]
+      visible: true
+      disabled: true
+    }
+  }
+}

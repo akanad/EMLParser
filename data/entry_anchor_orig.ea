@@ -1,0 +1,194 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Entry Anchor"; win_name: "entry_anchor"; win_type: basic
+  size: { w: 320, h: 300 }
+  Elm.Scroller {
+    id: scroller_1
+    hint_weight: [1, 1]
+    visible: true
+    ["elm.swallow.content"]: Elm.Box {
+      id: box_1
+      hint_weight: [1, 0]
+      hint_align: [-1, -1]
+      visible: true
+      Elm.Bubble {
+        id: bubble_1
+        Efl.Text.text["elm.text"]: "Message 3"
+        Efl.Text.text["elm.info"]: "10:32 4/11/2008"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+        visible: true
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_1
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+          hint_aspect: [horizontal, { w: 1, h: 1 }]
+          visible: true
+        }
+        ["elm.swallow.content"]: Elm.Entry {
+          id: entry_1
+          anchor_hover_style: "popout"
+          anchor_hover_parent: win_1
+          Efl.Text.text["elm.text"]: "Hi there. This is the most recent message in the list of messages. It has one <a href=tel:+614321234>+61 432 1234</a> (phone number) to click on."
+          visible: true
+        }
+      }
+      Elm.Bubble {
+        id: bubble_2
+        Efl.Text.text["elm.text"]: "Message 2"
+        Efl.Text.text["elm.info"]: "7:16 27/10/2008"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+        visible: true
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_2
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+          visible: true
+        }
+        ["elm.swallow.content"]: Elm.Entry {
+          id: entry_2
+          anchor_hover_style: "popout"
+          anchor_hover_parent: win_1
+          Efl.Text.text["elm.text"]: "Hey what are you doing? This is the second last message Hi there. This is the most recent message in the list. It's a longer one so it can wrap more and contains a <a href=contact:john>John</a> contact link in it to test popups on links. The idea is that all SMS's are scanned for things that look like phone numbers or names that are in your contacts list, and if they are, they become clickable links that pop up a menus of obvious actions to perform on this piece of information. This of course can be later explicitly done by links maybe running local apps or even being web URL's too that launch the web browser and point it to that URL. <item relsize=16x16 vsize=full href=emoticon/omg></item>"
+          visible: true
+        }
+      }
+      Elm.Bubble {
+        id: bubble_3
+        Efl.Text.text["elm.text"]: "Message 1"
+        Efl.Text.text["elm.info"]: "20:47 18/6/2008"
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+        visible: true
+        ["elm.swallow.icon"]: Elm.Icon {
+          id: icon_3
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          resizable: [false, false]
+          hint_aspect: [horizontal, { w: 1, h: 1 }]
+          visible: true
+        }
+        ["elm.swallow.content"]: Elm.Entry {
+          id: entry_3
+          anchor_hover_style: "popout"
+          anchor_hover_parent: win_1
+          Efl.Text.text["elm.text"]: "This is a short message. <item relsize=16x16 vsize=full href=emoticon/haha></item>"
+          visible: true
+        }
+      }
+    }
+    on animator,tick {
+      content_pos_set: [-13, 171, true]
+      content_pos_set: [-13, 171, true]
+    }
+    on animator,tick {
+      content_pos_set: [-13, 212, true]
+      content_pos_set: [-28, 212, true]
+    }
+    on animator,tick {
+      content_pos_set: [-28, 246, true]
+      content_pos_set: [-41, 246, true]
+    }
+    on animator,tick {
+      content_pos_set: [-41, 275, true]
+      content_pos_set: [-52, 275, true]
+    }
+    on animator,tick {
+      content_pos_set: [-52, 297, true]
+      content_pos_set: [-60, 297, true]
+    }
+    on animator,tick {
+      content_pos_set: [-60, 314, true]
+      content_pos_set: [-66, 314, true]
+    }
+    on animator,tick {
+      content_pos_set: [-66, 326, true]
+      content_pos_set: [-70, 326, true]
+    }
+    on animator,tick {
+      content_pos_set: [-70, 334, true]
+      content_pos_set: [-74, 334, true]
+    }
+    on animator,tick {
+      content_pos_set: [-74, 338, true]
+      content_pos_set: [-75, 338, true]
+    }
+    on animator,tick {
+      content_pos_set: [-75, 339, true]
+      content_pos_set: [-75, 339, true]
+    }
+    on animator,tick {
+      content_pos_set: [-75, 336, true]
+      content_pos_set: [-74, 336, true]
+    }
+    on animator,tick {
+      content_pos_set: [-74, 330, true]
+      content_pos_set: [-72, 330, true]
+    }
+    on animator,tick {
+      content_pos_set: [-72, 322, true]
+      content_pos_set: [-69, 322, true]
+    }
+    on animator,tick {
+      content_pos_set: [-69, 312, true]
+      content_pos_set: [-66, 312, true]
+    }
+    on animator,tick {
+      content_pos_set: [-66, 301, true]
+      content_pos_set: [-61, 301, true]
+    }
+    on animator,tick {
+      content_pos_set: [-61, 288, true]
+      content_pos_set: [-56, 288, true]
+    }
+    on animator,tick {
+      content_pos_set: [-56, 274, true]
+      content_pos_set: [-51, 274, true]
+    }
+    on animator,tick {
+      content_pos_set: [-51, 260, true]
+      content_pos_set: [-46, 260, true]
+    }
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_28
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_42
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_55
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_77
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_83
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_112
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_155
+  }
+  [none]: Efl.Loop_Timer {
+    id: loop_timer_161
+  }
+}
+Efl.Canvas.Rectangle {
+  id: rectangle_1; public
+}
+Evas.Image {
+  id: image_1; public
+}
+Efl.Canvas.Rectangle {
+  id: rectangle_2; public
+}
+Evas.Image {
+  id: image_2; public
+}

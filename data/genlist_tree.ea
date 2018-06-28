@@ -1,0 +1,88 @@
+Efl.Ui.Win {
+  id: win_1; public; hint_weight: [0, 0]; hint_align: [0.5, 0.5]; text: "Genlist Tree"; win_name: "genlist-tree"; win_type: basic
+  size: { w: 320, h: 320 }
+  Elm.Box {
+    hint_weight: [1, 1]
+    visible: true
+    Efl.Ui.Frame {
+      hint_weight: [1, 0]
+      hint_align: [-1, 0]
+      text["elm.text"]: "Genlist Tree Options"
+      ["elm.swallow.content"]: Elm.Box {
+        horizontal: true
+        homogeneous: true
+        hint_weight: [1, 0]
+        hint_align: [-1, -1]
+        visible: true
+        Repeater ( 2, 6 = [ "Tree Effect", "Homogeneous" ] ) {
+          Efl.Ui.Check {
+            hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+            text["elm.text"]: %6
+          }
+        }
+      }
+    }
+    Elm.Genlist {
+      hint_align: [-1, -1]
+      hint_weight: [1, 1]
+      visible: true
+      Repeater ( 2, 3 = [ "Item mode 1", "Item mode 2" ] ) {
+        Item {
+          creator: item_append
+          itc: 0x0; data: null; parent: null; type: tree; func: 0x0; func_data: null
+          style: "tree_effect"
+          part_text["elm.text"]: %3
+          ["elm.swallow.icon"]: Elm.Icon {
+            file: ["/usr/local/share/elementary/images/logo_small.png", null]
+            smooth_scale: true
+            Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+            hint_aspect: [vertical, { w: 1, h: 1 }]
+            visible: true
+          }
+          ["elm.swallow.end"]: Efl.Ui.Check {
+            hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+            propagate_events: false
+          }
+        }
+      }
+      Item {
+        creator: item_append
+        itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "indent"
+        part_text["elm.text"]: "Item mode 3"
+        ["elm.swallow.icon"]: Elm.Icon {
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+          visible: true
+        }
+        ["elm.swallow.end"]: Efl.Ui.Check {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          propagate_events: false
+        }
+      }
+      Item {
+        creator: item_append
+        itc: 0x0; data: null; parent: null; type: none; func: 0x0; func_data: null
+        style: "default"
+        part_text["elm.text"]: "Item mode 4"
+        ["elm.swallow.icon"]: Elm.Icon {
+          file: ["/usr/local/share/elementary/images/logo_small.png", null]
+          smooth_scale: true
+          Efl.Gfx.Size_Hint.hint_restricted_min: { w: 0, h: 0 }
+          hint_aspect: [vertical, { w: 1, h: 1 }]
+          visible: true
+        }
+        ["elm.swallow.end"]: Efl.Ui.Check {
+          hint_weight: [0, 0]; hint_align: [0.5, 0.5]
+          propagate_events: false
+        }
+      }
+    }
+  }
+  Repeater ( 2 ) {
+    [none]: Efl.Loop_Timer {
+    }
+  }
+}
