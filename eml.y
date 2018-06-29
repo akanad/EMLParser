@@ -2,6 +2,9 @@
 
 #include <iostream>
 #include "Node.h"
+
+EBlocks *emlBody;
+
 extern int yylex();
 void yyerror(const char *s) { std::cout << s << std::endl; }
 
@@ -10,23 +13,34 @@ void yyerror(const char *s) { std::cout << s << std::endl; }
 %error-verbose
 
 %union {
-    ENode *node;
-    std::string *string;
-    int token;
+    ENode           *node;
+    EBlocks         *eml_blocks;
+    EBlock          *eml_block;
+    std::string     *string;
+    int             token;
 }
 
 %token <string> TIDENTIFIER TWIDGET TSTRING TNUMBER TON TREPLACER
 %token <token> TLBRACKET TRBRACKET TLBRACE TRBRACE TLPAREN TRPAREN
 %token <token> TCOL TEND TCOMMA TSCOL TEQUAL TREPEATER TDOT
 
-%start eml_blocks
+
+%type <eml_blocks> eml_blocks eml
+%type <eml_block> eml_block
+%start eml
 
 %%
 
+/* EML <<<<<<<<<<<< */
+eml
+:   eml_blocks                                                  { emlBody = $1; }
+/* EML >>>>>>>>>>>> */
+
+
 /* BLOCK <<<<<<<<<<<< */
 eml_blocks
-:   eml_blocks eml_block                            { std::cout << "append block" << std::endl; }
-|   eml_block                                       { std::cout << "new block" << std::endl; }
+:   eml_blocks eml_block                                        { $1->blockList.push_back($<eml_block>2); std::cout << "append block" << std::endl; }
+|   eml_block                                                   { $$ = new EBlocks(); $$->blockList.push_back($<eml_block>1); std::cout << "new block" << std::endl; }
 ;
 
 eml_block
@@ -38,8 +52,8 @@ eml_block
 ;
 
 eml_callbackblocks
-:   eml_callbackblocks eml_callbackblock                            { std::cout << "append block" << std::endl; }
-|   eml_callbackblock                                       { std::cout << "new block" << std::endl; }
+:   eml_callbackblocks eml_callbackblock
+|   eml_callbackblock
 ;
 
 eml_callbackblock
@@ -52,10 +66,10 @@ eml_callbackblock
 
 /* OBJECT <<<<<<<<<<<< */
 eml_object
-:   eml_list TCOL eml_name_ns TLBRACE eml_blocks TRBRACE     { std::cout << "LALR(1)"<< std::endl; }
-|   eml_list TCOL eml_name_ns TLBRACE TRBRACE     { std::cout << "LALR(1)" << std::endl; }
-|   eml_name_ns TLBRACE eml_blocks TRBRACE     { std::cout << "new block body" << std::endl; }
-|   eml_name_ns TLBRACE TRBRACE                     { std::cout << "new empty block body" << std::endl; }
+:   eml_list TCOL eml_name_ns TLBRACE eml_blocks TRBRACE
+|   eml_list TCOL eml_name_ns TLBRACE TRBRACE
+|   eml_name_ns TLBRACE eml_blocks TRBRACE
+|   eml_name_ns TLBRACE TRBRACE
 ;
 /* >>>>>>>>>>> OBJECT */
 
@@ -63,14 +77,14 @@ eml_object
 
 /* PROPERTY <<<<<<<<<<<< */
 eml_property
-:   eml_name_ns                                  { std::cout << "property ident " << std::endl; }
-|   eml_keyvalue                                 { std::cout << "property val : keyvalue" << std::endl; }
+:   eml_name_ns
+|   eml_keyvalue
 ;
 
 eml_callbackproperty
-:   eml_keyvalue                                 { std::cout << "property val : keyvalue" << std::endl; }
-|   eml_name_ns                                  { std::cout << "property ident " << std::endl; }
-|   eml_name_ns eml_name_ns                      { std::cout << "property val : function call?" << std::endl; }
+:   eml_keyvalue
+|   eml_name_ns
+|   eml_name_ns eml_name_ns
 ;
 /* >>>>>>>>>>> PROPERTY */
 
@@ -78,8 +92,8 @@ eml_callbackproperty
 
 /* CALLBACK <<<<<<<<<<<< */
 eml_callback
-:   TON  TLBRACE eml_callbackblocks TRBRACE          { std::cout << "new callback body"<< *$1 << std::endl; }
-|   TON  TLBRACE TRBRACE                     { std::cout << "new empty callback body"<< *$1 << std::endl; }
+:   TON  TLBRACE eml_callbackblocks TRBRACE
+|   TON  TLBRACE TRBRACE
 ;
 /* >>>>>>>>>>> CALLBACK */
 
@@ -87,7 +101,7 @@ eml_callback
 
 /* REPEATER <<<<<<<<<<<< */
 eml_repeater
-:   eml_repeaterbase TLBRACE eml_object TRBRACE     { std::cout << "repeater ... is it possible?" << std::endl; }
+:   eml_repeaterbase TLBRACE eml_object TRBRACE
 ;
 
 eml_repeaterbase
@@ -100,9 +114,9 @@ eml_repeater_specs
 ;
 
 eml_repeater_spec
-:   TNUMBER TCOMMA TNUMBER TEQUAL eml_list      { std::cout << "spec 1" << *$1 << *$3 << std::endl; }
-|   TNUMBER TEQUAL eml_list                     { std::cout << "spec 1" << *$1 << std::endl; }
-|   TNUMBER                                     { std::cout << "spec 2" << *$1 << std::endl; }
+:   TNUMBER TCOMMA TNUMBER TEQUAL eml_list
+|   TNUMBER TEQUAL eml_list
+|   TNUMBER
 ;
 /* >>>>>>>>>>> REPEATER */
 
@@ -115,22 +129,22 @@ eml_name_ns
 
 /* KEYVALUE <<<<<<<<<<<< */
 eml_keyvalue
-:   eml_key TCOL eml_value                      { std::cout << "new keyvalue" << std::endl; }
+:   eml_key TCOL eml_value
 ;
 
 eml_key
-:   eml_name_ns                                     { std::cout << "new key : "  << std::endl; }
-|   eml_name_ns TLBRACKET TSTRING TRBRACKET         { std::cout << "new key2(part) : " << *$3 << std::endl; }
-|   eml_name_ns TLBRACKET eml_name_ns TRBRACKET     { std::cout << "new key3(part) : " << std::endl; }
+:   eml_name_ns
+|   eml_name_ns TLBRACKET TSTRING TRBRACKET
+|   eml_name_ns TLBRACKET eml_name_ns TRBRACKET
 ;
 
 eml_value
-:   eml_name_ns                                 { std::cout << "new val :"  << std::endl; }
-|   TSTRING                                     { std::cout << "new val :" << *$1 << std::endl; }
-|   TNUMBER                                     { std::cout << "new val :" << *$1 << std::endl; }
-|   TREPLACER                                   { std::cout << "new val :" << *$1 << std::endl; }
-|   eml_list                                    { std::cout << "new val eml_list" << std::endl; }
-|   eml_map                                     { std::cout << "new val eml_list" << std::endl; }
+:   eml_name_ns
+|   TSTRING
+|   TNUMBER
+|   TREPLACER
+|   eml_list
+|   eml_map
 
 ;
 /* >>>>>>>>>>> KEYVALUE */
